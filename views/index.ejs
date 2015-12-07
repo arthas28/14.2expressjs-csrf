@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title><%= title %></title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/manage.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.min.css">
+</head>
+<body>
+    <!-- 容器-->
+    <div class="bg">
+    <div class="container">
+        <!-- 登录框div-->
+        <div class="wrapper_border">
+            <div class="wrapper_login">
+                <!-- 标题logo-->
+                <div class="login_title">
+                    <img class="img-circle" src="images/twitter.ico"/>
+                    LOGIN 新闻管理系统
+                </div>
+                <!-- 表单，bootstrap行内属性类-->
+                <form class="form-inline">
+                    <div class="login_body">
+                        <label for="exampleInputName">用户：</label>
+                        <input type="text" class="form-control" id="exampleInputName" name="exampleInputName" required>
+                        <br/><br/>
+                        <label for="exampleInputPassword">密码：</label>
+                        <input type="password" class="form-control" id="exampleInputPassword" name="exampleInputPassword" required>
+                    </div>
+                    <!-- 登录链接，点击进入系统首页-->
+                    <div class="login_btn">
+                        <input class="submit btn btn-info" id="loginBtn" type="submit" value="确认"/>
+                        <input class="reset btn btn-info" type="reset" value="重置"/>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script type="text/javascript" src="/javascripts/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="/javascripts/manage.js"></script>
+</body>
+</html>

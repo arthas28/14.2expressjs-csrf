@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title><%= title %></title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/baiduNews.css"/>
+</head>
+<body>
+    <!-- 前端主容器 -->
+    <div class="wrapper">
+        <!-- 页面头部布局 -->
+        <div class="header">
+            <div class="toolbarL">
+                <a href="http://m.baidu.com/?from=1000376a"><div class="toolbarBdu floatLeft toolbarH"></div></a>
+                <a href="http://m.baidu.com/news#userhome"><div class="toolbarUsr floatLeft toolbarH"></div></a>
+            </div>
+            <div class="toolbarR">
+                <a href="http://m.baidu.com/news#searchbox"><div class="toolbarSer floatLeft toolbarH"></div></a>
+                <a href="http://m.baidu.com/news#subscribe"><div class="toolbarAdd floatLeft toolbarH"></div></a>
+            </div>
+        </div>
+        <!-- 页面导航布局 -->
+        <div class="nav">
+            <div class="line"></div>
+            <div class="content">
+                <div>推荐</div>
+                <div>本地</div>
+            </div>
+        </div>
+        <!-- 页面主体布局 -->
+        <div class="article">
+            <div class="imgBox">
+                <a href="http://m.baidu.com/news#page/2/http%3A%2F%2Fview.inews.qq.com%2Fa%2FNEW2015102100998802/%E8%8B%B1%E5%A5%B3%E7%8E%8B%E4%B8%BE%E8%A1%8C%E5%9B%BD%E5%AE%B4%E6%AC%BE%E5%BE%85%E4%B9%A0%E8%BF%91%E5%B9%B3/%E8%85%BE%E8%AE%AF%E5%9B%BE%E7%89%87/1445397296000/5589650791923925018"><img src="images/n1.jpeg"></a>
+            </div>
+            <div class="hotWord"></div>
+            <div class="indexList" id="indexList">
+            <!-- 内容追加区域 -->
+            </div>
+            <div class="refresh" id="refresh">点击加载更多</div>
+        </div>
+        <!-- 页面页脚布局 -->
+        <div class="footer">
+            <div class="itemWrapper">
+                <a href="http://ufosdk.baidu.com/">
+                    <div class="item item1">意见反馈</div>
+                </a>
+            </div>
+            <div class="itemWrapper">
+                <a href="http://wap.baidu.com/static/img/vsapp/webimageiphone.html">
+                    <div class="item item2">应用推荐</div>
+                </a>
+            </div>
+            <div class="itemWrapper">
+                <div class="item item3">客户端</div>
+            </div>
+        </div>
+
+    </div>
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="/javascripts/xss.js"></script>
+    <script type="text/javascript" src="/javascripts/baiduNews.js"></script>
+</body>
+</html>

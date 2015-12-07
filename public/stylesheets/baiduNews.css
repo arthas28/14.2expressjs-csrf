@@ -1,0 +1,270 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+div{
+    display: block;
+}
+
+body{
+    height: 480px;
+}
+
+.floatLeft{
+    float: left;
+}
+/*工具栏样式*/
+.toolbarH{
+    width: 34px;
+    height: 100%;
+    font-size: 15px;
+    line-height: 44px;
+    background: url('../images/bg-new-toolbar.png') no-repeat;
+}
+/*主容器样式*/
+.wrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+}
+/*头部样式*/
+.header{
+    position: relative;
+    min-width: 320px;
+    height: 44px;
+    z-index: 2;
+    text-align: center;
+    font-weight: 400;
+    color: #fff;
+    background: #3e98f0 url('../images/bg-news-logo.png') no-repeat center 6px;
+    -webkit-background-size: 77px auto;
+}
+
+.header .toolbarL,.header .toolbarR{
+    top: 0;
+    position: absolute;
+    height: 100%;
+    overflow: hidden;
+}
+
+.header .toolbarL{
+    left: 0;
+}
+
+.header .toolbarR{
+    right: 0;
+}
+
+.header .toolbarBdu{
+    background-position: center 4px;
+    -webkit-background-size: 40px 500px;
+}
+
+.header .toolbarUsr{
+    background-position: center -463px;
+    -webkit-background-size: 40px 500px;
+    margin-left: 10px;
+}
+
+.header .toolbarSer{
+    background-position: center -162px;
+    -webkit-background-size: 40px 500px;
+    margin-right: 10px;
+}
+
+.header .toolbarAdd{
+    background-position: center -107px;
+    -webkit-background-size: 40px 500px;
+}
+/*导航栏样式*/
+.nav{
+    background: #3e98f0;
+}
+
+.nav .line{
+    height: 1px;
+    margin: 0 10px;
+    background-color: #5dabf0;
+}
+
+.nav .content{
+    padding: 3px 0 5px 0;
+    width: 100%;
+    height: 33px;
+}
+
+.nav .content div{
+    width: 50%;
+    color: #fff;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 26px;
+    border-left: 1px solid #4fadf0;
+    float: left;
+}
+/*页面主体*/
+.article{
+    position: relative;
+    z-index: 1;
+    color: #262b31;
+    font-size: 16px;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    min-height: 800px;
+}
+
+.article .imgBox{
+    margin: 10px 10px 0;
+    overflow: hidden;
+}
+
+.article .hotWord{
+    height: 28px;
+    background-color: #f8f9fa;
+    overflow: hidden;
+    margin: 10px 10px 0;
+}
+
+.imgBox img{
+    width: 100%;
+    height: inherit;
+    min-height: 187px;
+    max-height: 287px;
+    vertical-align: middle;
+}
+/*追加div样式*/
+.indexListItem{
+    position: relative;
+    border-bottom: 1px solid #f6f6f6;
+    overflow: hidden;
+    padding: 10px 0;
+    margin: 0 10px;
+}
+
+.indexListItem img{
+    display: block;
+    float: left;
+    height: 68px;
+    width: 95px;
+    vertical-align: middle;
+    margin-right: 10px;
+    border: 1px solid #e8e8e8;
+}
+
+.indexListContent{
+    height: 40px;
+    overflow: hidden;
+}
+
+.indexListTitle{
+    font-size: 16px;
+    line-height: 20px;
+    margin: -1px 0 4px 0;
+}
+
+.indexListMain{
+    font-size: 13px;
+    line-height: 20px;
+    color: #b8bac0;
+    font-weight: 400;
+}
+
+.indexListBottom{
+    text-align: left;
+    margin-top: 10px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #b8bac0;
+    font-weight: 400;
+}
+
+.tipTopic{
+    background-color: #e02f2f;
+    float: right;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    color: #fff;
+    padding: 1px 2px;
+    border-radius: 2px;
+    margin: 1px 0 0 10px;
+    max-width: 100px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.tipTime{
+    /*width: 100px;*/
+    height: 20px;
+    overflow-x: hidden;
+}
+
+.refresh{
+    height: 36px;
+    line-height: 36px;
+    background-color: #f8f9fa;
+    text-align: center;
+    border: 1px solid #ebedef;
+    border-radius: 1px;
+    color: #545454;
+    margin: 14px 40px;
+}
+/*页脚样式*/
+.footer{
+    height: 44px;
+    overflow: hidden;
+    background-color: #239bf0;
+    font-size: 13px;
+    line-height: 22px;
+}
+
+.itemWrapper{
+    float: left;
+    width: 33.3%;
+    height: 21px;
+    overflow: hidden;
+    margin-top: 12px;
+    text-align: center;
+    border-left: 1px solid #4fadf0;
+    color: #fff;
+}
+
+.itemWrapper .item{
+    display: inline-block;
+    height: 100%;
+    padding-left: 25px;
+    background: url('../images/bg-footer.png') no-repeat;
+    background-size:  30px 300px;
+}
+
+.itemWrapper .item1{
+    background-position: 0 3px;
+}
+
+.itemWrapper .item2{
+    background-position: 0 -31px;
+}
+
+.itemWrapper .item3{
+    background-position: 0 -64px;
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title><%= title %></title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/system.css">
+    <script type="text/javascript">
+    //定义时钟的js函数
+    function showTime() {
+            var enabled = 0;
+            today = new Date();
+            var day;
+            var date;
+            if (today.getDay() == 0) day = "星期日"
+            if (today.getDay() == 1) day = "星期一"
+            if (today.getDay() == 2) day = "星期二"
+            if (today.getDay() == 3) day = "星期三"
+            if (today.getDay() == 4) day = "星期四"
+            if (today.getDay() == 5) day = "星期五"
+            if (today.getDay() == 6) day = "星期六"
+            date = (today.getYear() + 1900 )+ "年" + (today.getMonth() + 1 ) + "月" + today.getDate() + "日 " +
+                    day + today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+            document.getElementById("header_time").innerHTML = date;
+        }
+    setInterval('showTime()',1000);
+    </script>
+   
+</head>
+<body onload="showTime()">
+    <div class="bg">
+    <!--容器-->
+    <div class="container">
+        <!-- 网页头部-->
+        <div class="header">
+            <div class="row">
+                <div class="header_title col-md-7 h1">新闻集中管理平台</div>
+                <div class="header_time col-md-3" id="header_time">
+                </div>
+                <div class="header_exit col-md-2">
+                    <!-- <a href="/logout"> -->
+                    <button id="btn_exit" class="btn_exit btn btn-primary">退出系统</button>
+                    <!-- </a> -->
+                </div>
+            </div>
+        </div>
+        <!-- 网页主体，双飞翼结构-->
+        <div class="article">
+            <!-- 主体内容部分，优先渲染-->
+            <div class="wrapper">
+                <div class="inner row">
+                    <div class="section-list col-md-5 col-md-offset-1">
+                        <table class="table table-hover">
+                            <tbody id="myTable"></tbody>
+                        </table>
+                    </div>
+                
+                    <div class="section-msg col-md-4 col-md-offset-1">
+                        <h3>消息录入管理</h3>
+                        <form>
+                            <input type="hidden" id="token" value=<%= token%> />
+                            <div>
+                                <label for="selectDel">已存新闻条录:</label>
+                                <p>
+                                    <select id="selectDel" name="selectDel">
+                                        <option value="请选择...">请选择...</option>
+                                    </select>
+                                </p>
+                            </div>
+                            <p>
+                                <label for="url">URL:</label>
+                                <input id="url" name="url" type="text" required/>
+                            </p>
+                            <p>
+                                <label for="pic">附图:</label>
+                                <input id="pic" name="pic" type="text" placeholder="images/newspic/ns1.jpg" required/>
+                            </p>
+                            <p>
+                                <label for="title">标题:</label>
+                                <input id="title" name="title" type="text" required/>
+                            </p> 
+                            <p>
+                                <label for="content">内容:</label>
+                                <textarea id="content" name="content" type="text" required></textarea>
+                            </p>
+                            <p>
+                                <label for="topic">主题:</label>
+                                <input id="topic" name="topic" type="text" placeholder="专题" required/>
+                            </p>
+                            <p>
+                                <label for="time">时间:</label>
+                                <input id="time" name="time" type="date" required/>
+                            </p>
+                            <p>
+                                <button class="btn" id="msgBtn" type="submit">录入</button> 
+                                <button class="btn" id="updBtn" type="submit">修改</button> 
+                                <button class="btn" id="delBtn" type="submit">删除</button> 
+                                <button class="btn" id="retBtn" type="reset">重置</button>
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- 左侧栏内容-->
+            <div class="aside">
+                <img src="/images/User.ico" class="img-circle">
+                <p>登录成功，欢迎！</p>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="/javascripts/xss.js"></script>
+    <script type="text/javascript" src="/javascripts/system.js"></script>
+
+</body>
+</html>
